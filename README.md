@@ -1,7 +1,7 @@
 # Modos-chrome-extension
-A chrome extension to help improve productivity
+Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 
-- You'll create groups where you can decide what kind of mood are you. 
+- Você vai criar grupos de perfis onde você pode decidir que tipo de site você vai acessar.
 
 ### Funcionalidades da extensão
 
