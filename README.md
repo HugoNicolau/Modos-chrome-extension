@@ -21,3 +21,9 @@ Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 - Reconhecer qual site estou acessando
 - Inserir css na página atual se diferir do site do perfil
 - Aceitar lista de sites do usuário e comparar
+
+
+### TODO
+
+- English README
+- Commits for each new feature
