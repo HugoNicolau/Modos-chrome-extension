@@ -1,4 +1,4 @@
-# Modos-chrome-extension
+# Modos extensão do chrome
 Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 
 - Você vai criar grupos de perfis onde você pode decidir que tipo de site você vai acessar.
@@ -27,3 +27,7 @@ Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 
 - English README
 - Commits for each new feature
+
+### Modos chrome extension
+
+A chrome extension that helps you to improve your productivity
