@@ -31,3 +31,5 @@ Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 ### Modos chrome extension
 
 A chrome extension that helps you to improve your productivity
+
+- You will create groups of profiles where you can decide what kind of website you're going to access.
