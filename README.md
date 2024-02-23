@@ -37,3 +37,4 @@ A chrome extension that helps you to improve your productivity
 ### Extension features
 
 - Create profiles, for example: Study, Work, Fun and Free.
+- For each profile, you'll input whitelisted websites.
