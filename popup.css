@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+#message {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#visited-sites-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#visited-sites-list li:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
