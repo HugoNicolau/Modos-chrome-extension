@@ -10,7 +10,8 @@
         "128": "images/icon-128.png"
     },
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"],
+        "persistent": false
     },
     "action": {
         "default_icon": {
@@ -29,5 +30,11 @@
                 "mac": "Command+B"
             }
         }
-      }
+      },
+      "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ]
 }
