@@ -38,3 +38,4 @@ A chrome extension that helps you to improve your productivity
 
 - Create profiles, for example: Study, Work, Fun and Free.
 - For each profile, you'll input whitelisted websites.
+- When you try to access websites outside the white list, you'll receive a block message
