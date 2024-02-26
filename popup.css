@@ -3,7 +3,7 @@ body {
     padding: 10px;
 }
 
-#message {
+#messages {
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -16,4 +16,10 @@ body {
 #visited-sites-list li:hover {
     background-color: #f0f0f0;
     border-radius: 5px;
+}
+
+#url {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
 }
