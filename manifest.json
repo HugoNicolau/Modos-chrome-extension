@@ -28,5 +28,9 @@
           "js": ["content.js"]
         }
       ],
-      "host_permissions": ["<all_urls>"]
+      "host_permissions": ["<all_urls>"],
+      "options_page": "options.html",
+      "options_ui": {
+        "page": "options.html"
+      }
 }

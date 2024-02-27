@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modos Focus</title>
-    <link rel="stylesheet" href="options.css">
-    <script src="options.js" defer></script>
+    <title>Extension Options</title>
 </head>
 <body>
-    <h1>Add Website Links</h1>
-    <label for="labelName">Label Name:</label>
-    <input type="text" id="labelName">
-    <label for="linkUrl">Website Url:</label>
-    <input type="text" id="linkUrl">
-    <button id="addLinkButton">Add Link</button>
-    <button id="saveLabelButton">Save Label</button>
+    <h1>Extension Options</h1>
+    <label for="websiteLink">Enter Website Link:</label>
+    <input type="text" id="websiteLink">
+    <button id="saveLinkButton">Save Link</button>
     <div id="statusMessage"></div>
-    <ul id="linkList"></ul>
-
+    <h2>Saved Links:</h2>
+    <ul id="savedLinks"></ul>
+    <script src="options.js"></script>
 </body>
 </html>

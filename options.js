@@ -1,50 +1,47 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const labelInput = document.getElementById('labelName');
-    const linkInput = document.getElementById('linkUrl');
-    const addLinkButton = document.getElementById('addLinkButton');
-    const saveLabelButton = document.getElementById('saveLabelButton');
+    const websiteLinkInput = document.getElementById('websiteLink');
+    const saveLinkButton = document.getElementById('saveLinkButton');
     const statusMessage = document.getElementById('statusMessage');
-    const linkList = document.getElementById('linkList');
+    const savedLinksList = document.getElementById('savedLinks');
 
-    let label = '';
-    let links = [];
-
-
-    chrome.storage.sync.get(['label', 'links'], function(data) {
-        label = data.label || '';
-        links = data.links || [];
-        renderLinks();
+    // Load saved links from Chrome storage
+    chrome.storage.local.get('links', function(data) {
+        const savedLinks = data.links || [];
+        renderLinks(savedLinks);
     });
 
-
-    addLinkButton.addEventListener('click', function() {
-        const url = linkInput.value.trim();
-        if (url !== '') {
-            links.push(url);
-            linkInput.value = '';
-            renderLinks();
-        }
-    });
-
-    saveLabelButton.addEventListener('click', function() {
-        const newLabel = labelInput.value.trim();
-        if (newLabel !== '') {
-            label = newLabel;
-            labelInput.value = '';
-            chrome.storage.sync.set({ 'label': label, 'links': links }, function() {
-                statusMessage.textContent = 'Label saved successfully.';
+    // Save link when button is clicked
+    saveLinkButton.addEventListener('click', function() {
+        const newLink = websiteLinkInput.value.trim();
+        if (newLink !== '') {
+            // Retrieve existing links from Chrome storage
+            chrome.storage.local.get('links', function(data) {
+                const savedLinks = data.links || [];
+                // Add the new link to the array
+                savedLinks.push(newLink);
+                // Save the updated array to Chrome storage
+                chrome.storage.local.set({ 'links': savedLinks }, function() {
+                    // Display success message
+                    statusMessage.textContent = 'Link saved successfully.';
+                    // Update the displayed links
+                    renderLinks(savedLinks);
+                });
             });
+            // Clear the input field
+            websiteLinkInput.value = '';
         } else {
-            statusMessage.textContent = 'Please enter a label name.';
+            // Display error message if input is empty
+            statusMessage.textContent = 'Please enter a valid link.';
         }
     });
 
-    function renderLinks() {
-        linkList.innerHTML = '';
+    // Function to render saved links
+    function renderLinks(links) {
+        savedLinksList.innerHTML = '';
         links.forEach(function(link) {
             const listItem = document.createElement('li');
             listItem.textContent = link;
-            linkList.appendChild(listItem);
+            savedLinksList.appendChild(listItem);
         });
     }
 });
