@@ -1,50 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const labelInput = document.getElementById('labelName');
-    const linkInput = document.getElementById('linkUrl');
-    const addLinkButton = document.getElementById('addLinkButton');
-    const saveLabelButton = document.getElementById('saveLabelButton');
-    const statusMessage = document.getElementById('statusMessage');
-    const linkList = document.getElementById('linkList');
+    const toggleButton = document.getElementById('toggleButton');
 
-    let label = '';
-    let links = [];
-
-
-    chrome.storage.sync.get(['label', 'links'], function(data) {
-        label = data.label || '';
-        links = data.links || [];
-        renderLinks();
-    });
+    toggleButton.addEventListener('click', function() {
+        // Get the current flag value
+        chrome.storage.local.get('contentEnabled', function(data) {
+            const contentEnabled = data.contentEnabled;
+            // Toggle the flag
+            const newContentEnabled = !contentEnabled;
+            chrome.storage.local.set({ 'contentEnabled': newContentEnabled }, function() {
+                console.log('Content script enabled:', newContentEnabled);
+                toggleButton.textContent = newContentEnabled ? 'Disable Content' : 'Enable Content';
 
 
-    addLinkButton.addEventListener('click', function() {
-        const url = linkInput.value.trim();
-        if (url !== '') {
-            links.push(url);
-            linkInput.value = '';
-            renderLinks();
-        }
-    });
-
-    saveLabelButton.addEventListener('click', function() {
-        const newLabel = labelInput.value.trim();
-        if (newLabel !== '') {
-            label = newLabel;
-            labelInput.value = '';
-            chrome.storage.sync.set({ 'label': label, 'links': links }, function() {
-                statusMessage.textContent = 'Label saved successfully.';
+                chrome.tabs.query({ active: true, currentWindow: true}, function(tabs) {
+                    const currentTab = tabs[0];
+                    chrome.tabs.sendMessage(currentTab.id, { action: 'toggleScript', contentEnabled: newContentEnabled});
+                });
             });
-        } else {
-            statusMessage.textContent = 'Please enter a label name.';
-        }
-    });
-
-    function renderLinks() {
-        linkList.innerHTML = '';
-        links.forEach(function(link) {
-            const listItem = document.createElement('li');
-            listItem.textContent = link;
-            linkList.appendChild(listItem);
         });
-    }
+    });
 });
