@@ -22,6 +22,12 @@ Uma extensão do crhome para te ajudar a melhorar sua produtividade.
 - Inserir css na página atual se diferir do site do perfil
 - Aceitar lista de sites do usuário e comparar
 
+### Arquivos
+
+- Content.js serve pras coisas que vão rodar nas pages enquanto a extensão tá ativa, ela pode modificar o DOM da página, aparência, comportamento e tal, além de conseguir comunicar com outras partes da extensão
+- Background.js tem acesso a APIs que não estão disponíveis no content como storage e tabs, elas são tipicamente usadas para performar tarefas de longo prazo e coordenar comunicação entre partes diferentes da extensão
+- Options Serve pra ter uma pagina extra onde o user interage
+- Popup é similar com a options
 
 ### TODO
 
@@ -41,3 +47,5 @@ A chrome extension that helps you to improve your productivity
 - When you try to access websites outside the white list, you'll receive a block message.
 
 ### Bonus
+
+
