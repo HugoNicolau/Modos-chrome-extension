@@ -1,7 +1,7 @@
 // Function to update the UI based on the stored state
 function updatePopupUI(state) {
   const toggleButton = document.getElementById("toggleButton");
-  toggleButton.textContent = state ? "Pause Extension" : "Play Extension";
+  toggleButton.textContent = state ? "Play Extension" : "Pause Extension";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
