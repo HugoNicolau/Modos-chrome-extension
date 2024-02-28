@@ -9,5 +9,12 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     chrome.storage.local.set({ 'extensionPaused': extensionPaused }, function() {
       console.log('Extension state changed:', extensionPaused ? 'paused' : 'playing');
     });
+    chrome.tabs.reload();
+  }
+  if (message.action === 'pauseExtension') {
+    chrome.storage.local.set({ 'extensionPaused': true}, function() {
+      console.log('Extension paused');
+    });
+    chrome.tabs.reload();
   }
 });

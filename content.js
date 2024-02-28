@@ -27,19 +27,39 @@ chrome.storage.local.get('extensionPaused', function(data) {
                             blackScreen.style.height = "100%";
                             blackScreen.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
                             blackScreen.style.zIndex = "9999";
-
+                            blackScreen.style.display = "flex";
+                            blackScreen.style.flexDirection = "column";
+                            blackScreen.style.justifyContent = "center";
+                            blackScreen.style.alignItems = "center";
+                            
                             var message = document.createElement("div");
                             message.id = "blackScreenMessage";
-                            message.style.position = "absolute";
-                            message.style.top = "50%";
-                            message.style.left = "50%";
-                            message.style.transform = "translate( -50%, -50%)";
                             message.style.color = "white";
                             message.style.fontSize = "48px";
                             message.textContent = "ESTE SITE NÃO PODE SER ACESSADO";
+                            message.style.textAlign = "center";
+                            message.style.marginBottom = "20px";
+                            
+                            const button = document.createElement('button');
+                            button.textContent = 'Pause Extension';
+                            button.style.padding = "10px 20px"; // Add padding for better appearance
+                            button.style.fontSize = "18px"; // Increase font size
+                            button.style.border = "none"; // Remove border
+                            button.style.borderRadius = "5px"; // Add border radius
+                            button.style.backgroundColor = "red"; // Change background color
+                            button.style.color = "white"; // Change text color
+                            button.style.cursor = "pointer"; // Add pointer cursor
+
+                            // Add event listener to handle button click
+                            button.addEventListener('click', function() {
+                                // Send message to background script to toggle the extension state
+                                chrome.runtime.sendMessage({ action: 'pauseExtension' });
+                            });
 
                             blackScreen.appendChild(message);
+                            blackScreen.appendChild(button)
                             document.body.appendChild(blackScreen);
+                            
                         };
                         init();
                     }
