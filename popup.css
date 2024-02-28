@@ -1,6 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+ 
 }
 
 button {
