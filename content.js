@@ -50,6 +50,16 @@ chrome.storage.local.get('extensionPaused', function(data) {
                             button.style.color = "white"; // Change text color
                             button.style.cursor = "pointer"; // Add pointer cursor
 
+                            // Listener to hover button
+                            button.addEventListener('mouseenter', function() {
+                                button.style.backgroundColor = 'darkred';
+                            });
+
+                            // Reset background color on mouse leave
+                            button.addEventListener('mouseleave', function() {
+                                button.style.backgroundColor = 'red';
+                            });
+
                             // Add event listener to handle button click
                             button.addEventListener('click', function() {
                                 // Send message to background script to toggle the extension state
