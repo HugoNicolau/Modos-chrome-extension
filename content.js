@@ -1,10 +1,8 @@
 // Listen for messages from the background script or popup script
-chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-    if (message.action === 'toggleScript') {
-        const contentEnabled = message.contentEnabled;
-        if (contentEnabled) {
-            // Your content script logic goes here
-            let currentUrl = window.location.href;
+chrome.storage.local.get('extensionPaused', function(data) {
+    const extensionPaused = data.extensionPaused;
+    if(!extensionPaused) {
+        let currentUrl = window.location.href;
             function getDomain(url) {
                 const parsedUrl = new URL(url);
                 return parsedUrl.hostname;
@@ -47,16 +45,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
                     }
                 });
             });
-        } else {
-            console.log("Content script is disabled");
-            var blackScreen = document.getElementById('blackScreen');
-            var blackScreenMessage = document.getElementById('blackScreenMessage');
-            if (blackScreen) {
-                blackScreen.remove();
-            }
-            if (blackScreenMessage) {
-                blackScreenMessage.remove();
-            }
-        }
+    } else {
+        console.log('Content script is paused')
     }
-});
+})
