@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Extension Options</title>
+    <link rel="stylesheet" href="options.css">
   </head>
   <body>
+    
     <h1>Extension Options</h1>
+    <form id="addGroupForm">
+      <label for="newGroup">Create New Group:</label>
+      <input type="text" id="newGroup" name="newGroup">
+      <button type="submit" id="addGroupButton">Add Group</button>
+    </form>
+    <br>
     <label for="websiteLink">Enter Website Link:</label>
     <input type="text" id="websiteLink" />
+    <br>
+    <label for="linkGroup">Select Link Group:</label>
+    <select id="linkGroup">
+      <option value="All">All</option>
+    </select>
     <button id="saveLinkButton">Save Link</button>
     <div id="statusMessage"></div>
     <h2>Saved Links:</h2>
