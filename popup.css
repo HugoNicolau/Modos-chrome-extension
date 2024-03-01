@@ -17,9 +17,20 @@ button {
   background-color: #4e8cff; /* Change background color */
   color: white; /* Change text color */
   cursor: pointer; /* Add pointer cursor */
+  transition: background-color 0.3s ease;
 }
 
 /* Styling for the button on hover */
 button:hover {
   background-color: #3469e0; /* Change background color on hover */
+}
+
+#groupContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+  border: 2px solid black;
+  padding: 10px;
 }

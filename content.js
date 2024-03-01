@@ -13,10 +13,11 @@ chrome.storage.local.get("extensionPaused", function (data) {
       console.log("URL enviada pro background.js");
     });
 
-    chrome.storage.local.get("links", function (data) {
+    chrome.storage.local.get(["links", "groups"], function (data) {
       const savedLinks = data.links || [];
-      savedLinks.forEach(function (link) {
-        if (getDomain(link) == getDomain(currentUrl)) {
+      console.log("saved:", savedLinks)
+      savedLinks.forEach(function (item) {
+        if (getDomain(item.link) == getDomain(currentUrl)) {
           const init = function () {
             var blackScreen = document.createElement("div");
             blackScreen.id = "blackScreen";

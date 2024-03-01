@@ -5,6 +5,26 @@ function updatePopupUI(state) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  const groupContainer = document.getElementById('groupContainer');
+
+  chrome.storage.local.get('groups', function(data) {
+    const groups = data.groups || [];
+
+    // Create buttons for each group
+    groups.forEach(function(group) {
+      const button = document.createElement('button');
+      button.textContent = group;
+      button.addEventListener('click', function() {
+        console.log('Group selected: ', group);
+        chrome.storage.local.set({ selectedGroup: group }, function () {
+          console.log("Selected group changed: ", group);
+        })
+      });
+      groupContainer.appendChild(button);
+    });
+  });
+
   const toggleButton = document.getElementById("toggleButton");
 
   // Load the initial state from chrome.storage.local and update de UI
