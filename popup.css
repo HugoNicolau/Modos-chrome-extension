@@ -8,6 +8,10 @@ body {
   margin: 20px;
 }
 
+p {
+  font-size: 18px;
+}
+
 /* Styling for the button */
 button {
   padding: 10px 20px; /* Add padding for better appearance */
@@ -30,7 +34,53 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 20px;
   border: 2px solid black;
   padding: 10px;
+  margin-bottom: 20px;
+}
+
+#optionsButton {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#optionsButton:hover {
+  text-decoration: underline;
+}
+
+/* Default styling for the button */
+#toggleButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.groupButton.selected {
+  background-color: green;
+  color: white;
+}
+
+.groupButton:hover {
+    background-color: #6c757d; /* Darker gray on hover */
+}
+
+/* Styling for when extension is paused */
+#toggleButton.paused {
+  background-color: #28a745; 
+  color: white;
+}
+
+/* Styling for when extension is playing */
+#toggleButton.playing {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Hover effect for both states */
+#toggleButton:hover {
+  background-color: #6c757d; /* Darker gray on hover */
 }
