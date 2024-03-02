@@ -73,3 +73,11 @@ button {
   margin-right: 5px;
   font-size: 16px; /* Larger font size */
 }
+.delete-button {
+  padding: 5px 10px;
+  background-color: transparent; /* Red background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor on hover */
+}

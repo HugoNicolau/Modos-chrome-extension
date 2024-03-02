@@ -91,7 +91,27 @@ document.addEventListener("DOMContentLoaded", function () {
     links.forEach(function (linkObject) {
       const listItem = document.createElement("li");
       listItem.textContent = `${linkObject.link} - ${linkObject.group}`;
+      
+      // Function to remove items
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "❌";
+      removeButton.classList.add("delete-button");
+      removeButton.addEventListener("click", function () {
+        removeLink(linkObject.link);
+      });
+      listItem.appendChild(removeButton);
       savedLinksList.appendChild(listItem);
+    });
+  }
+
+  function removeLink(linkToRemove) {
+    chrome.storage.local.get("links", function (data) {
+      const savedLinks = data.links || [];
+      const updatedLinks = savedLinks.filter(link => link.link !== linkToRemove);
+
+      chrome.storage.local.set({ links: updatedLinks }, function () {
+        renderLinks(updatedLinks);
+      });
     });
   }
 
