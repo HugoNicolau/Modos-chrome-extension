@@ -11,8 +11,6 @@ chrome.storage.local.get("extensionPaused", function (data) {
         const parsedUrl = new URL(url);
         return parsedUrl.hostname;
       }
-
-      console.log("Domain:", currentUrl);
     } catch (error) {
       console.error("Error parsing URL:", error);
     }
@@ -47,12 +45,12 @@ chrome.storage.local.get("extensionPaused", function (data) {
               message.id = "blackScreenMessage";
               message.style.color = "white";
               message.style.fontSize = "48px";
-              message.textContent = "ESTE SITE NÃO PODE SER ACESSADO";
+              message.textContent = "Site não permitido no grupo";
               message.style.textAlign = "center";
               message.style.marginBottom = "20px";
 
               const button = document.createElement("button");
-              button.textContent = "Pause Extension";
+              button.textContent = "Pause";
               button.style.padding = "10px 20px"; // Add padding for better appearance
               button.style.fontSize = "18px"; // Increase font size
               button.style.border = "none"; // Remove border

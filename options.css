@@ -7,6 +7,12 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  color: #e91717; 
+  font-size: 40px; /* Larger font size */
+}
+
+h2 {
+  margin-bottom: 20px;
   color: #007bff; /* Blue heading */
   font-size: 24px; /* Larger font size */
 }
@@ -57,21 +63,23 @@ button {
 }
 
 #savedLinks {
-  list-style-type: none;
-  padding: 0; 
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  font-size: 16px;
+  color: rgb(0, 119, 255);
 }
 
 #savedLinks li {
-  margin-bottom: 5px;
-  font-size: 16px; /* Larger font size */
+  margin-bottom: 5px; /* Add some space between items */
+  padding: 10px; /* Add padding to each item */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-#savedLinks li::before {
-  content: "• ";
-  color: #007bff;
-  font-weight: bold;
-  margin-right: 5px;
-  font-size: 16px; /* Larger font size */
+#savedLinks li:hover {
+  background-color: #e0e0e0; /* Darker gray background on hover */
 }
 .delete-button {
   padding: 5px 10px;
@@ -86,7 +94,7 @@ button {
 #group-list {
   list-style-type: none; /* Remove bullet points */
   padding: 0; /* Remove default padding */
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 

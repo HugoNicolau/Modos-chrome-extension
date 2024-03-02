@@ -101,17 +101,17 @@ document.addEventListener("DOMContentLoaded", function () {
       removeButton.textContent = "❌";
       removeButton.classList.add("delete-button");
       removeButton.addEventListener("click", function () {
-        removeLink(linkObject.link);
+        removeLink(linkObject.link, linkObject.group);
       });
       listItem.appendChild(removeButton);
       savedLinksList.appendChild(listItem);
     });
   }
 
-  function removeLink(linkToRemove) {
+  function removeLink(linkToRemove, linkGroup) {
     chrome.storage.local.get("links", function (data) {
       const savedLinks = data.links || [];
-      const updatedLinks = savedLinks.filter(link => link.link !== linkToRemove);
+      const updatedLinks = savedLinks.filter(link => link.link !== linkToRemove || link.group !== linkGroup);
 
       chrome.storage.local.set({ links: updatedLinks }, function () {
         renderLinks(updatedLinks);
