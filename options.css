@@ -81,3 +81,26 @@ button {
   border-radius: 4px; /* Rounded corners */
   cursor: pointer; /* Cursor on hover */
 }
+
+/* Style for the group list */
+#group-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Style for each group item */
+#group-list li {
+  margin-bottom: 5px; /* Add some space between items */
+  padding: 10px; /* Add padding to each item */
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect */
+#group-list li:hover {
+  background-color: #e0e0e0; /* Darker gray background on hover */
+}

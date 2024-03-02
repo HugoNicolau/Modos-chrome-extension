@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const addGroupForm = document.getElementById("addGroupForm");
   const newGroupInput = document.getElementById("newGroup");
   const addGroupButton = document.getElementById("addGroupButton");
+  const savedGroupsList = document.getElementById("group-list");
   
 
   // Load saved links from Chrome storage
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const savedGroups = data.groups || [];
     renderLinks(savedLinks);
     renderGroups(savedGroups);
+    renderGroupList(savedGroups);
   });
 
   // Save link when button is clicked
@@ -70,6 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
             statusMessage.classList.remove("red");
             newGroupInput.value = "";
             renderGroups(savedGroups);
+            renderGroupList(savedGroups);
+
           });
         } else {
           statusMessage.textContent = "This group already exists."
@@ -125,4 +129,35 @@ document.addEventListener("DOMContentLoaded", function () {
       linkGroupInput.appendChild(option);
     });
   }
+
+  function renderGroupList(groups) {
+
+    savedGroupsList.innerHTML = "";  
+    groups.forEach(group => {
+      const listItem = document.createElement("li");
+      listItem.textContent = group;
+      savedGroupsList.appendChild(listItem);
+      // Function to remove items
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "❌";
+      removeButton.classList.add("delete-button");
+      removeButton.addEventListener("click", function () {
+        removeGroup(group);
+      });
+      listItem.appendChild(removeButton);
+    });
+  }
+
+  function removeGroup(groupToRemove) {
+    chrome.storage.local.get("groups", function (data) {
+      const savedGroups = data.groups || [];
+      const updatedGroups = savedGroups.filter(group => group !== groupToRemove);
+
+      chrome.storage.local.set({ groups: updatedGroups }, function () {
+        renderGroups(updatedGroups);
+        renderGroupList(updatedGroups);
+      });
+    });
+  }
+
 });
