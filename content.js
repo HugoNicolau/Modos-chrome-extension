@@ -45,7 +45,7 @@ chrome.storage.local.get("extensionPaused", function (data) {
               message.id = "blackScreenMessage";
               message.style.color = "white";
               message.style.fontSize = "48px";
-              message.textContent = "Site não permitido no grupo";
+              message.textContent = "Website isn't allowed in this group";
               message.style.textAlign = "center";
               message.style.marginBottom = "20px";
 
