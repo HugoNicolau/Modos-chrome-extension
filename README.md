@@ -51,6 +51,6 @@ You can pause the extension on the popup too
 <img src="./images/pausing-popup.gif">
 
 ## How to use
-You can download this repository in your computer and load in your chrome
+You can download this repository in your computer and load in your chrome. Then you create groups and save links to them.
 
 # Soon: Portuguese Readme
