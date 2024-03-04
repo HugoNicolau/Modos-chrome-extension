@@ -53,4 +53,4 @@ You can pause the extension on the popup too
 ## How to use
 You can download this repository in your computer and load in your chrome
 
-# Soon on chrome store ^^
+# Soon: Portuguese Readme
