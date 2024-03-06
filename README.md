@@ -53,4 +53,4 @@ You can pause the extension on the popup too
 ## How to use
 You can download this repository in your computer and load in your chrome. Then you create groups and save links to them.
 
-# Soon: Portuguese Readme
+# Soon: Portuguese Readme and better video presentation
