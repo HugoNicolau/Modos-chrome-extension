@@ -1,7 +1,8 @@
 # Modos Focus
 A chrome extension to help you improve your productivity.
 
-### Video showing and explaining the extension: https://www.youtube.com/watch?v=6B3vvc40yFk
+### Demonstration: https://youtu.be/rS3RefVrd5k
+### Video explaining the extension: https://www.youtube.com/watch?v=6B3vvc40yFk
 
 ## Extension Features
 - You will create groups of profiles where you can decide which type of websites you cannot access within these groups.
