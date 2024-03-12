@@ -2,7 +2,7 @@
 A chrome extension to help you improve your productivity.
 
 ### Demonstration[PT]: https://youtu.be/rS3RefVrd5k
-### Demonstration[EN]:
+### Demonstration[EN]: https://www.youtube.com/watch?v=nxuLVWyPMMI
 ### Video explaining the extension[PT]: https://www.youtube.com/watch?v=6B3vvc40yFk
 
 ## Extension Features
