@@ -56,3 +56,6 @@ You can pause the extension on the popup too
 You can download this repository in your computer and load in your chrome. Then you create groups and save links to them.
 
 # Soon: Portuguese Readme and better video presentation
+-----------------------------------------------
+# Modos Focus
+Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
