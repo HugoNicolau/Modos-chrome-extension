@@ -1,4 +1,4 @@
-# Modos Focus
+# Modos Focus[EN]
 A chrome extension to help you improve your productivity.
 
 ### Demonstration[PT]: https://youtu.be/rS3RefVrd5k
