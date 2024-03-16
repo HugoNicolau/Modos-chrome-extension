@@ -59,3 +59,5 @@ You can download this repository in your computer and load in your chrome. Then 
 -----------------------------------------------
 # Modos Focus[PT]
 Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
+
+### Demonstração[PT]: https://youtu.be/rS3RefVrd5k
