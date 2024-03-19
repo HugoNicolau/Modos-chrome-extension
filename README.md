@@ -2,7 +2,6 @@
 A chrome extension to help you improve your productivity.
 
 ### Demonstration[EN]: https://www.youtube.com/watch?v=nxuLVWyPMMI
-### Video explaining the extension[PT]: https://www.youtube.com/watch?v=6B3vvc40yFk
 
 ## Extension Features
 - You will create groups of profiles where you can decide which type of websites you cannot access within these groups.
