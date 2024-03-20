@@ -60,3 +60,5 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 
 ### Demonstração[PT]: https://youtu.be/rS3RefVrd5k
 ### Vídeo explicando a extensão[PT]: https://www.youtube.com/watch?v=6B3vvc40yFk
+
+### Aplicações da extensão
