@@ -62,3 +62,4 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 ### Vídeo explicando a extensão[PT]: https://www.youtube.com/watch?v=6B3vvc40yFk
 
 ### Aplicações da extensão
+- Você vai criar grupos de perfis onde você pode decidir qual tipo de websites você não pode acessar nesses grupos.
