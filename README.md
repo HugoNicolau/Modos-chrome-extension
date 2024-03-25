@@ -64,3 +64,4 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 ### Aplicações da extensão
 - Você vai criar grupos de perfis onde você pode decidir qual tipo de websites você não pode acessar nesses grupos.
 - Crie perfis como: Estudos, Trabalho, Lazer, Livre.
+- Para cada perfil, nós vamos listar os sites bloqueados.
