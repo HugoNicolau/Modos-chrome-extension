@@ -66,3 +66,5 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 - Crie perfis como: Estudos, Trabalho, Lazer, Livre.
 - Para cada perfil, nós vamos listar os sites bloqueados.
 - Quando tentar acessar o site que está na lista do perfil atual, a extensão deve bloquear
+
+### Demonstração
