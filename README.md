@@ -68,3 +68,4 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 - Quando tentar acessar o site que está na lista do perfil atual, a extensão deve bloquear
 
 ### Demonstração
+Você pode clicar no ícone da extensão e essa popup vai aparecer
