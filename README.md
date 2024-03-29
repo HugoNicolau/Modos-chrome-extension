@@ -69,3 +69,4 @@ Uma extensão do Chrome para te ajudar a aumentar sua produtividade.
 
 ### Demonstração
 Você pode clicar no ícone da extensão e essa popup vai aparecer
+<img src="./images/popup-screen.gif">
